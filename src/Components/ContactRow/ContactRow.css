@@ -1,0 +1,29 @@
+.contact-row { 
+  border: 2px solid;
+  border-color: #e4e7f0;
+  color: #1f2129;
+  height: 46px;
+}
+
+.contact-row:nth-child(even) {
+  background-color: #FAFBFF
+}
+
+.contact-name {
+  color: #356ae6;
+  cursor: pointer;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.profile {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: #eae0fe;
+  color: #1f2129;
+  font-size: 10px;
+  text-align: center;
+  margin-right: 8px
+}

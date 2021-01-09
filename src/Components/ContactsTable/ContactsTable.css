@@ -1,0 +1,22 @@
+
+.contacts-table {
+  text-align: left;
+  font-family: 'Lucida Grande';
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: normal;
+  padding-left: 12px
+}
+
+td {
+  padding-left: 12px
+}
+
+.table-header {
+  font-weight: normal;
+  color: #5f667e;
+  font: 28px;
+}
