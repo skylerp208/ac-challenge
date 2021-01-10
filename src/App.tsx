@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ErrorBoundary from './Components/ErrorHandling/ErrorBoundary';
+import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
 import TableContainer from './Components/TableContainer/TableContainer';
 
 function App() {

@@ -8,6 +8,10 @@ const API_URL = 'https://thingproxy.freeboard.io/fetch/https://sahmed93846.api-u
 const TableContainer = () => {
 
   const [contacts, setContacts] = useState<Contact[]>([])
+  const [error, setError] = useState< Error | null>(null)
+
+  if (error) throw new Error(error.message);
+
  
   useEffect(() => {
     fetch(API_URL, {
@@ -21,21 +25,29 @@ const TableContainer = () => {
         setContacts(data.contacts)
       })
     .catch(err => {
-        console.log('error message: ', err.message);
-        // if a i throw an error here, error boundary doesnt catch it
-        throw new Error('async error!')
+        setError(err)
       })
   }, [])
 
-  
+  if (contacts.length > 0) {
+      return (
+      <div className="table-container">
+        <ContactsTable 
+          {...{contacts}}
+        />
+      </div>
+    )
+  }
 
-  return (
-    <div className="table-container">
-      <ContactsTable 
-        {...{contacts}}
-      />
+   return (
+    <div className="d-flex justify-content-center" style={{position: 'absolute', top: '25%', left: '25%', width: '50%'}}>
+      <div className="spinner-border text-primary" role="status">
+        <span className="sr-only"> Loading... </span>
+      </div>
     </div>
   )
+
+  
 }
 
 export default TableContainer;
