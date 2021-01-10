@@ -9,19 +9,20 @@ interface Contact {
 }
 
 interface Props {
-  contact: Contact
+  contact: Contact;
 }
 
-const ContactRow = (props: Props) => {
-  let { contact } = props;
+const ContactRow = ( {contact} : Props) => {
+  const { firstName, lastName, email, phone } = contact;
+
   return (
       <tr className="contact-row">
         <td className="contact-name"> 
-          <span className="profile"> {`${contact.firstName[0]}${contact.lastName[0]}`} </span>
-          {`${contact.firstName} ${contact.lastName}`} 
+          <span className="profile"> {`${firstName[0]}${lastName[0]}`} </span>
+          {`${firstName} ${lastName}`} 
         </td>
-        <td> {contact.email} </td>
-        <td> {contact.phone} </td>
+        <td> {email} </td>
+        <td> {phone} </td>
       </tr>
     )
 }

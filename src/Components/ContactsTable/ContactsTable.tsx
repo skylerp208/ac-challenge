@@ -6,25 +6,27 @@ interface contactProps {
   contacts: any[];
 }
 
-const ContactsTable = (props: contactProps) => {
+const HEADERS = ['Contact', 'Email', 'Phone Number']
 
-  let contactsArr: any[] = props.contacts.map(c => {
+const ContactsTable = ({contacts} : contactProps) => {
+
+  let contactsArr: any[] = contacts.map(c => {
     return <ContactRow contact={c} key={c.id} />
   })
-
+ 
   return (
+    <div>
       <table className="contacts-table">
         <thead>
-          <tr className="table-header">
-            <th> Contact </th>
-            <th> Email </th>
-            <th> Phone Number </th>
+          <tr>
+            {HEADERS.map((header, idx) => <th key={idx}> {header} </th>)}
           </tr>
         </thead>
         <tbody>
           {contactsArr}
         </tbody>
       </table>
+    </div>
   )
 }
 

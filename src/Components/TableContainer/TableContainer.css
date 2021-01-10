@@ -4,5 +4,6 @@
   left: 12.5%;
   top: 10%;
   overflow-y: scroll;
+  overflow-x: hidden;
   border: 2px solid  #e4e7f0;
 }
