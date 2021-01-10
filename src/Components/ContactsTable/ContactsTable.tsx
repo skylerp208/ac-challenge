@@ -1,9 +1,10 @@
 import React from 'react';
 import ContactRow from '../ContactRow/ContactRow';
 import './ContactsTable.css';
+import Contact from '../../API/interfaces';
 
 interface contactProps {
-  contacts: any[];
+  contacts: Contact[];
 }
 
 const HEADERS = ['Contact', 'Email', 'Phone Number']

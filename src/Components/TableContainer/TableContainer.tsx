@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import ContactsTable from '../ContactsTable/ContactsTable';
 import './TableContainer.css';
+import Contact from '../../API/interfaces';
 
 const API_URL = 'https://thingproxy.freeboard.io/fetch/https://sahmed93846.api-us1.com/api/3/contacts'
 
 const TableContainer = () => {
 
-  const [contacts, setContacts] = useState([])
+  const [contacts, setContacts] = useState<Contact[]>([])
  
   useEffect(() => {
     fetch(API_URL, {

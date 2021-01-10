@@ -1,12 +1,6 @@
 import React from 'react';
 import  './ContactRow.css'
-
-interface Contact {
-  firstName: string,
-  lastName: string,
-  email: string,
-  phone: string
-}
+import Contact from '../../API/interfaces';
 
 interface Props {
   contact: Contact;
