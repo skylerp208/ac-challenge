@@ -3,7 +3,7 @@ import ContactsTable from '../ContactsTable/ContactsTable';
 import './TableContainer.css';
 import Contact from '../../API/interfaces';
 
-const API_URL = 'https://thingproxy.freeboard.io/fetch/https://sahmed93846.api-us1.com/api/3/contacts'
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://sahmed93846.api-us1.com/api/3/contacts'
 
 const TableContainer = () => {
 
