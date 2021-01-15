@@ -1,11 +1,11 @@
 .table-container {
   height: 50%;
   position: absolute;
-  width:  50%;
-  left: 25%;
+  width:  75%;
+  left: 12.5%;
   top: 10%;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: scroll;
   border-top: 2px solid #e4e7f0;
   border-bottom: 2px solid #e4e7f0
 } 

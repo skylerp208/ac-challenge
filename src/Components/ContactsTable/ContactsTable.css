@@ -5,20 +5,16 @@
   font-size: 13px;
   border-collapse: collapse;
   border: 1px solid #e4e7f0;
-  width: 100%
+  width: 100%;
 }
 
-th {
+.contacts-table th {
   font-weight: normal;
-  padding-left: 12px
-}
-
-td {
-  padding-left: 12px
-}
-
-.table-header {
-  font-weight: normal;
+  padding-left: 12px;
   color: #5f667e;
   font: 28px;
+}
+
+.contacts-table td {
+  padding-left: 12px;
 }
