@@ -22,9 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +47,4 @@
     "jest-fetch-mock": "^3.0.3",
     "msw": "^0.25.0"
   },
-  "homepage" : "https://skylerp208.github.io/ac_challange"
 }
