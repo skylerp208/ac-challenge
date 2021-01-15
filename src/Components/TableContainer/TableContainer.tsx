@@ -4,9 +4,8 @@ import './TableContainer.css';
 import { Contact, ContactTag, Deal,  GeoAddress, GeoIps, Tag} from '../../API/interfaces';
 import axios from 'axios';
 
-// the first thing i did was forget my dependency array in my useffect
-// and max out my cors-anywhere limit for the hour. so i switched to thingproxy
-const API_URL = 'https://thingproxy.freeboard.io/fetch/https://sahmed93846.api-us1.com/api/3/contacts?include=contactTags.tag,deals,geoIps.geoAddress'
+
+const API_URL = 'https://sahmed93846.api-us1.com/api/3/contacts?include=contactTags.tag,deals,geoIps.geoAddress'
 
 interface TableState {
   contacts:  Contact[],
@@ -41,7 +40,7 @@ const TableContainer = () => {
       try {
         const result = await axios({
           method: 'GET',
-          url: API_URL,
+          url: 'https://cors-anywhere.herokuapp.com/' + API_URL,
           headers: {
             "Api-Token": process.env.REACT_APP_API_KEY as string
           }
