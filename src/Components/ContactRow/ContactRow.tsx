@@ -10,8 +10,8 @@ interface Props {
 }
 
 const UNICODES: {[key: string]: string} = {
-  usd: '\u0024',
-  aud: '\u0024',
+  usd: 'US\u0024',
+  aud: 'A\u0024',
   eur: '\u20AC'
 }
 

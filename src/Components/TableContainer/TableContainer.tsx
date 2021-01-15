@@ -5,7 +5,7 @@ import { Contact, ContactTag, Deal,  GeoAddress, GeoIps, Tag} from '../../API/in
 import axios from 'axios';
 
 
-const API_URL = 'https://sahmed93846.api-us1.com/api/3/contacts?include=contactTags.tag,deals,geoIps.geoAddress'
+const API_URL = 'https://cors-anywhere.herokuapp.com/https://sahmed93846.api-us1.com/api/3/contacts?include=contactTags.tag,deals,geoIps.geoAddress'
 
 interface TableState {
   contacts:  Contact[],
@@ -40,7 +40,7 @@ const TableContainer = () => {
       try {
         const result = await axios({
           method: 'GET',
-          url: 'https://cors-anywhere.herokuapp.com/' + API_URL,
+          url: API_URL,
           headers: {
             "Api-Token": process.env.REACT_APP_API_KEY as string
           }
